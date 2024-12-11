@@ -1,7 +1,4 @@
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-
-// import { Plus, BsEyeFill } from "react-icons/bs";
 import { Plus, Eye } from "lucide-react";
 
 import { useCart } from "../contexts/CartContext";
@@ -9,7 +6,6 @@ import { useCart } from "../contexts/CartContext";
 const Product = ({ product }) => {
   const { cart, dispatch } = useCart();
 
-  // destructure product
   const { id, image, category, title, price } = product;
 
   const disabled = cart.some((product) => product.id === id);

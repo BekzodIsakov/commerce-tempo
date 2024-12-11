@@ -3,6 +3,7 @@ import { ShoppingBag } from "lucide-react";
 
 import logo from "../assets/icons/logo.svg";
 import { useCart } from "../contexts/CartContext";
+import { Link } from "react-router-dom";
 
 const Header = ({ handleSidebarOpen }) => {
   const [isActive, setIsActive] = useState(false);
@@ -29,9 +30,9 @@ const Header = ({ handleSidebarOpen }) => {
     >
       <div className='container flex justify-between px-6 mx-auto'>
         <div className='w-10'>
-          <a href='/'>
+          <Link to='/'>
             <img src={logo} alt='logo icon' />
-          </a>
+          </Link>
         </div>
 
         <button className='relative sidebar-btn'>
